@@ -11,7 +11,7 @@
     <div v-if="fatherComponent == 'item'" >
       <div class="item_back item_container_style">
         <div class="item_list_container">
-          <h2 class="item_title">题目一</h2>
+          <h2 class="item_title">{{itemDetail[itemNum-1].topic_name}}</h2>
           <ul>
             <li class="item_list" v-for="(item, index) in itemDetail[itemNum-1].topic_answer" @click="choosed(index, item.topic_answer_id)">
               <span class="option_style" v-bind:class="{ 'has_choosed': index === choosedNum }">{{chooseType(index)}}</span>
